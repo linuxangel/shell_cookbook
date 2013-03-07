@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Shell cookbook : 让你的shell 风生水起" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Shell cookbook</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/linuxangel/shell_cookbook">View on GitHub</a>
+
+          <h1 id="project_title">Shell cookbook</h1>
+          <h2 id="project_tagline">让你的shell 风生水起</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/linuxangel/shell_cookbook/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/linuxangel/shell_cookbook/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>贡献者：隋成龙</h1>
+
+<h1>编辑整理：邢耀东</h1>
+
+<h6>第一章Shell  之讨厌的正则</h6>
+
+<ul>
+<li> 思想（KISS）相当重要.</li>
+<li>  我们遵循KISS原则  （keep it simple，stupid） </li>
+<li>  这事其实不难，只要按照以下思路进行就行了。 </li>
+</ul><blockquote>
+<ol>
+<li> 把复杂的问题简单化，模块化 </li>
+<li> 写出每一个模块的伪码。 </li>
+<li> 组装你的模块 </li>
+<li> 写出shell code </li>
+<li>  测试（test） </li>
+</ol>
+</blockquote>
+
+<h4>知道什么时候用什么实现，远比你知道怎么写code更重要。（shell不是万能的，择优取之。</h4>
+
+<h4>shell最精华，最美的地方在于有现成的命令可以使用，不用考虑过多的底层的问题。作为上</h4>
+
+<h4>层工作的最好的工具，所谓上层系统管理，网络管理等等。）</h4>
+
+<h3>战略决定生死，细节决定成败</h3>
+
+<h2>以下是我们以后将要更新的章节</h2>
+
+<ul>
+<li>  讨厌的正则</li>
+<li>  可爱的变量</li>
+<li>  简单明了的输入输出</li>
+<li>  神奇的判断</li>
+<li>  不可不会的文件操作</li>
+<li>  瞬间飞升</li>
+</ul><h3>第一节讨厌的正则</h3>
+
+<ul>
+<li>   之所以讨厌一个事物，是因为你驾驭不了它。</li>
+</ul><blockquote>
+<ol>
+<li>乱七八糟的符号。
+  举例：（grep  为行模式，默认以行显示）</li>
+</ol>
+<blockquote>
+<p>(1)
+ <code>[root@localhost ~]# cat /etc/passwd | grep --color "r..t"</code>
+  <code>root:x:0:0:root:/root:/bin/bash</code>
+  <code>operator:x:11:0:operator:/root:/sbin/nologin</code>
+  <code>ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin</code>
+  <code>You have new mail in /var/spool/mail/root</code>
+  <code>[root@localhost ~]#</code></p>
+</blockquote>
+
+<p>显示三行</p>
+
+<blockquote>
+<p>(2)
+ <code>[root@localhost ~]# cat /etc/passwd | grep --color 'root'</code>
+  <code>root:x:0:0:root:/root:/bin/bash</code>
+  <code>operator:x:11:0:operator:/root:/sbin/nologin</code>
+  <code>[root@localhost ~]#</code></p>
+</blockquote>
+
+<p>显示两行</p>
+
+<blockquote>
+<p>(3)
+ <code>[root@localhost ~]# cat /etc/passwd | grep --color '^root'</code>
+<code>root:x:0:0:root:/root:/bin/bash</code>
+<code>[root@localhost ~]#</code></p>
+</blockquote>
+
+<p>显示一行  </p>
+
+<ul>
+<li> 总结以上<code>:</code>什么是正则，两个单引号中间的部分就是正则。 </li>
+</ul>
+</blockquote>
+
+<ul>
+<li>  正则有什么用？ </li>
+</ul><blockquote>
+<ol>
+<li>   查找匹配 
+&gt; 1)一个字符（如何在整篇文章中查找一个字符），正则提供了一些特殊符号，通过这
+些符号去替换一些东西.
+&gt;
+举例：在整篇文章中查找字母a </li>
+</ol>
+<blockquote>
+<p>使用vi编辑器打开/etc/passwd </p>
+
+<p>在末行模式下查找a 
+输入   ：/a/<br>
+比如要查找abc，是一个或的关系,那么用 [ ] 。<br>
+输入  ：/[abc]/<br>
+   ：/[a-c]/<br>
+  ：/a|b|c/</p>
+
+<p>中括号，把你想要定位的东西写入里面。</p>
+
+<p><code>.</code>   任意一个字符。 </p>
+
+<p><code>[]</code>  选择中括号里面的任意一个。 </p>
+
+<p><code>[^]</code>  取非，取反 </p>
+
+<p><code>[:alnum:]</code>阿尔法字符加数字 </p>
+
+<p><code>[:alpha:]</code>任意一个字符<code>[[:alpha]]</code> </p>
+
+<p><code>[:digit:]</code>任意一个数字 <code>[[:digit:]]</code>（对它取反的话<code>[^[:digit:]]</code>）意为除了任意一个数字。 </p>
+
+<p><code>[:lower:]</code>小写。  </p>
+
+<p><code>[:upper:]</code>大写。</p>
+
+<p><code>[:space:]</code>空格。</p>
+
+<p><code>[:punct:]</code>标点。</p>
+
+<ul>
+<li>总结<code>：</code>以上是如何定位一个字符。</li>
+</ul>
+</blockquote>
+</blockquote>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Shell cookbook maintained by <a href="https://github.com/linuxangel">linuxangel</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
