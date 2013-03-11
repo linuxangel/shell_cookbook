@@ -294,19 +294,19 @@ dog d.g dogdog !dog ddog!
 									<br>&copy;语出</I>《大学》</p>
 <p>正则本身是个贪婪模式，当你发现 `.*` 会匹配所有的东西。所以应该知道正则在哪停止。</p>
 <p>我们的课程是一门有思想的shell课程.</p>
-######知识列表######
-1.	bash的通配符
-2.	设定变量
-3.	变量的工作范围
-4.	变量的一些有意思的用法
-5.	有用的自带变量
-6.	有趣的操作符号
-7.	数学运算与数组
+<p>######知识列表######</p>
+<p>1.	bash的通配符</p>
+<p>2.	设定变量</p>
+<p>3.	变量的工作范围</p>
+<p>4.	变量的一些有意思的用法</p>
+<p>5.	有用的自带变量</p>
+<p>6.	有趣的操作符号</p>
+<p>7.	数学运算与数组</p>
 
 * 一.	bash通配符
 
-shell常见通配符
->><table>
+<p>shell常见通配符</p>
+<table>
 <tr>
 <th><I>字符</I></th>
 <th><I>含义</I></th>
@@ -711,11 +711,11 @@ PATH PIPESTATUS PPID PS1 PS2 PS4 PWD
 ,在10上加上 { } 。</p>
 <p>$#用来计算参数的个数。</p>
 <p>$* 与$@ 显示该脚本所有参数。</p>
-举例：如下图18
+<p>举例：如下</p>
 
 <pre><code>
 [root@localhost ~]# vi test.sh
-\#!/bin/bash
+#!/bin/bash
 echo \$1=$1
 echo \$2=$2
 echo \$3=$3
@@ -730,7 +730,6 @@ echo \$10=${10}
 echo \$#=$#
 echo \$*=$*
 echo \$@=$@
-*************************************
 [root@localhost ~]# sh test.sh a b c d e f j k l m n 
 $1=a
 $2=b
@@ -746,7 +745,6 @@ $#=11
 $*=a b c d e f j k l m n
 $@=a b c d e f j k l m n
 [root@localhost ~]# 
-<图18>
 </code></pre>
 ***
 <p>$$ 指当前shell的PID</p>
