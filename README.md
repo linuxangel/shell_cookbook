@@ -1,8 +1,8 @@
 ######第一章Shell  之讨厌的正则 
-###linux 天使团团长：隋成龙
-###编辑整理：邢耀东
-###代码测试：韩国梁
-###版本美化: 杨飞
+###<p> linux天使团团长<a href="http://t.qq.com/cherubines7">隋成龙</a>.</p>
+###<p>整理编辑： <a href="http://t.qq.com/dongdong1260">邢耀东</a>.</p>
+###<p>代码测试： <a href="http://weibo.com/kinda0417">韩国梁</a>.</p>
+###<p> 版本美化：<a href="http://blog.sina.com.cn/shenmeh">杨飞</a>.</p>
 * 思想（KISS）相当重要.
 *	我们遵循KISS原则  （keep it simple，stupid） 
 *   这事其实不难，只要按照以下思路进行就行了。 
@@ -21,12 +21,12 @@ shell最精华，最美的地方在于有现成的命令可以使用，不用考
 ####<p>战略决定生死，细节决定成败</p> 
 ##以下是我们以后将要更新的章节
 
-*	讨厌的正则
-*	可爱的变量
-*	简单明了的输入输出
-*	神奇的判断
-*	不可不会的文件操作
-*	瞬间飞升
+*	<p>讨厌的正则:<a href="http://www.duobei.com/room/8314557667">点击观看</a>.</p>
+*	<p>可爱的变量:<a href="http://www.duobei.com/room/1878437230">点击观看</a>.</p>
+*	<p>简单明了的输入输出:<a href="http://linuxangel.github.com/shell_cookbook/">待更新</a>.</p>
+*	<p>神奇的判断:<a href="http://linuxangel.github.com/shell_cookbook/">待更新</a>.</p>
+*	<p>不可不会的文件操作:<a href="http://linuxangel.github.com/shell_cookbook/">待更新</a>.</p>
+*	<p> 瞬间飞升:<a href="http://linuxangel.github.com/shell_cookbook/">待更新</a>.</p>
 
 ###第一节讨厌的正则
 
