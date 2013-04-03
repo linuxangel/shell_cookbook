@@ -1,4 +1,4 @@
-######第一章Shell  之讨厌的正则 
+##第一章Shell  之讨厌的正则 
 ###<p> linux天使团团长<a href="http://t.qq.com/cherubines7">隋成龙</a>.</p>
 ###<p>整理编辑： <a href="http://t.qq.com/dongdong1260">邢耀东</a>.</p>
 ###<p>代码测试： <a href="http://weibo.com/kinda0417">韩国梁</a>.</p>
