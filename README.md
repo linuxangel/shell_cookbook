@@ -1,11 +1,13 @@
-#####第一章Shell  之讨厌的正则 
-###<p> linux天使团团长<a href="http://t.qq.com/cherubines7">隋成龙</a>.</p>
+#第一章
+#Shell  之讨厌的正则 
+---------------------------------------------------------------------------------------
+###<p>linux天使团团长  <a href="http://t.qq.com/cherubines7">隋成龙</a>.</p>
 ###<p>整理编辑： <a href="http://t.qq.com/dongdong1260">邢耀东</a>.</p>
 ###<p>代码测试： <a href="http://weibo.com/kinda0417">韩国梁</a>.</p>
-###<p> 版本美化：<a href="http://blog.sina.com.cn/shenmeh">杨飞</a>.</p>
-* 思想（KISS）相当重要.
-*	我们遵循KISS原则  （keep it simple，stupid） 
-*   这事其实不难，只要按照以下思路进行就行了。 
+###<p>版本美化：<a href="http://blog.sina.com.cn/shenmeh">杨飞</a>.</p>
+*   思想（KISS）相当重要!
+*	我们遵循KISS原则（keep it simple，stupid）!
+*   这事其实不难，只要按照以下思路进行就行了! 
 
 >1.  把复杂的问题简单化，模块化 
 >2.  写出每一个模块的伪码。 
